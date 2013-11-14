@@ -1,0 +1,36 @@
+{% extends "layout.twig.html" %}
+
+
+{% block content %}
+	<h1>Unn noen UKM</h1>
+	
+	<form method="POST" action="{{url.base}}">
+		<div class="form-group">
+			<label for="recipient">Til</label>
+			<input type="text" class="form-control" id="recipient" name="recipient" ng-model="recipient" placeholder="Skriv navn på mottaker">
+		</div>
+
+
+		<div class="form-group">
+			<label for="sender">Fra</label>
+			<input type="text" class="form-control" id="sender" name="sender" placeholder="Skriv ditt fulle navn">
+		</div>
+
+		<div class="form-group">
+			<label for="category">Jeg unner {% raw %}{{recipient || 'deg'}}{% endraw %} å delta på UKM med </label>
+			<select id="category" class="form-control" name="category">
+				{% for cat in categories %}
+					<option value="{{cat}}">{{cat}}</option>
+				{% endfor %}
+			</select>
+		</div>
+
+
+		<div class="form-group">
+			<label for="message">Personlig hilsen</label>
+			<textarea id="message" class="form-control" name="message" placeholder="Hvis du ønsker kan du skrive en personlig hilsen til {% raw %}{{recipient || 'mottaker'}}{% endraw %} her"></textarea>
+		</div>		
+		
+		<button class="btn btn-success" type="submit" id="create" name="create">Lag invitasjon</button>
+	</form>	
+  {% endblock %}

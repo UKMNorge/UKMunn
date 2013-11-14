@@ -1,0 +1,32 @@
+{% extends "layout.twig.html" %}
+
+{% block content %}
+	<h1>Send kortet til {{recipient}}</h1>
+	<input type="hidden" value="{{recipient}}" name="recipient" id="recipient" />
+	<input type="hidden" value="{{url.print}}{{invite.urlID}}/" name="printurl" id="printurl" />
+	<input type="hidden" value="{{invite.urlID}}" name="urlID" id="urlID" />
+	<div class="alert alert-info" id="sendUrlContainer">
+		<input type="text" class="form-control" readonly="readonly" value="{{url.base}}{{invite.urlID}}/" id="copyurl" />
+		Du kan kopiere og sende denne adressen til {{recipient}}, eller du kan trykke på en av knappene nedenfor
+	</div>
+
+	<div class="buttons" id="actionButtons">
+		<button class="btn btn-primary btn-small pull-right" id="sendPrint">Skriv ut</button>
+		<button class="btn btn-primary btn-small pull-right" id="sendMail">Send som e-post</button>
+		<button class="btn btn-primary btn-small pull-right" id="sendSMS">Send som SMS</button>
+		<button class="btn btn-primary btn-small pull-right" id="sendFace">Send på facebook</button>
+		<div class="clearfix"></div>
+	</div>
+	
+	<div class="alert alert-warning" id="collectMore" style="display:none;"></div>
+	
+	<div class="clearfix"></div>
+	{% embed "card.twig.html" %}{% endembed %}
+	<div class="clearfix"></div>
+
+
+	<h3>Kjenner du flere som burde delta på UKM?</h3>
+	<a href="/" class="btn btn-default btn-primary">Lag ny invitasjon</a>
+	<div class="clearfix"></div>
+
+{% endblock %}

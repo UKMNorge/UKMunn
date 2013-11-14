@@ -1,0 +1,18 @@
+#sendUrlContainer {
+	text-align: center;
+}
+#sendUrlContainer input {
+	text-align: center;
+}
+
+div.buttons button {
+	margin: 0px 5px 0px 5px;
+}
+
+div.card {
+	margin: 10px;
+}
+
+#copyurl {
+	cursor: text;
+}

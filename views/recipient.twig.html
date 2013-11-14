@@ -1,0 +1,30 @@
+{% extends "layout.twig.html" %}
+
+{% block title %}
+	{{card.recipient}} burde delta på UKM!
+{% endblock %}
+
+{% block content %}
+
+	{% embed "card.twig.html" with card %}{% endembed %}
+	
+	<div class="clearfix"></div>
+	
+	<div class="well well-small col-xs-5 pull-left">
+		<h3>Hva er UKM?</h3>
+		<p>In sit amet dictum nisl, at sollicitudin felis. Ut volutpat enim sed lorem porttitor fermentum. Cras gravida, purus a ullamcorper mattis, dolor eros vehicula turpis, vel malesuada justo</p>
+		<a href="http://ukm.no" class="btn btn-mini btn-primary">Les mer</a>
+	</div>
+	<div class="well well-small col-xs-5 pull-left">
+		<h3>Jeg vil delta</h3>
+		<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla diam libero, hendrerit id purus id, fermentum porta elit. Aliquam erat volutpat. Aliquam purus mauris, scelerisque non semper in</p>
+		<a href="http://pamelding.ukm.no" class="btn btn-mini btn-success">Start påmelding!</a>
+
+	</div>
+
+	<div class="well well-small col-xs-5 pull-left">
+		<h3>Jeg kjenner også noen som burde delta!</h3>
+		<p>Quisque ut lorem eu dui adipiscing dapibus. Etiam sed magna ut nulla adipiscing mollis eu quis elit. Aenean rutrum enim velit, at iaculis risus egestas ac. Praesent purus dui, consectetur sit amet pellentesque eget, rhoncus non metus. Phasellus cursus diam quis felis volutpat bibendum.</p>
+		<a href="{{url.base}}" class="btn btn-mini btn-primary">Inviter noen til UKM!</a>
+	</div>
+{% endblock %}
