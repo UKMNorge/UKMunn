@@ -16,7 +16,7 @@ $app->register(new Silex\Provider\TwigServiceProvider(), array(
 
 
 $url = new StdClass;
-$url->base 		= 'http://unn.ukm.local/';
+$url->base 		= 'http://'. $_SERVER['HTTP_HOST'].'/';
 $url->create 	= $url->base.'/';
 $url->send 		= $url->base.'send/';
 $url->sent		= $url->base.'sendt/';
