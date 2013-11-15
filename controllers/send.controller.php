@@ -21,7 +21,6 @@ if( mysql_num_rows( $res ) >= $MAXSEND ) {
 
 		//// SEND SMS
 		case 'sms':
-			echo 'Send SMS';
 			require_once('UKM/sms.class.php');
 			$sms = new SMS('unnukm',1);
 			$sms->text('Hei! Noen unner deg en UKM-opplevelse. Se '. $TWIG['url']->base .$_POST['send_url'].'/')
