@@ -22,6 +22,7 @@
 		<div class="form-group">
 			<label for="category">Jeg unner {% raw %}{{recipient || 'deg'}}{% endraw %} å delta på UKM med </label>
 			<select id="category" class="form-control" name="category">
+				<option value="noe" disabled="disabled" selected="selected">Velg kategori</option>
 				{% for cat in categories %}
 					<option value="{{cat}}">{{cat}}</option>
 				{% endfor %}
