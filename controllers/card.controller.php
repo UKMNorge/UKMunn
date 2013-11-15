@@ -8,3 +8,6 @@ $CARD->charset();
 $res = $CARD->run();
 
 $TWIG['card'] = mysql_fetch_assoc( $res );
+
+foreach( $TWIG['card'] as $key => $val )
+	$TWIG['card'][$key] = utf8_encode( $val );
