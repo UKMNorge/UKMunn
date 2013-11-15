@@ -1,0 +1,21 @@
+{% extends "layout.twig.html" %}
+
+{% block content_header %}
+	<h1>Kortet ble ikke sendt!</h1>
+{% endblock %}
+
+{% block content %}
+	<p class="lead">Vi kunne dessverre ikke sende invitasjonen til {{card.recipient}}</p>
+	<p><strong>Systemet ga følgende feilmelding:</strong><br /> {{error}}</p>
+{% endblock %}
+
+{% block content_footer %}
+	<div class="col-xs-12 col-md-6 col-md-offset-3">
+		<div class="header">
+			<h2>Kjenner du flere som burde delta på UKM?</h2>
+		</div>
+		<p>Det er fullt mulig å sende flere invitasjoner</p>
+		<a href="/" class="btn btn-primary">Lag ny invitasjon</a>
+		<div class="clearfix"></div>
+	</div>
+{% endblock %}

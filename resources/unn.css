@@ -1,18 +1,156 @@
-#sendUrlContainer {
-	text-align: center;
-}
-#sendUrlContainer input {
-	text-align: center;
-}
+/* ********************************** */
+/* BODY */
+	body {
+		background: #b5d5d2;
+		background-image: url('/resources/img/unn_ukm_bg.jpg');
+		background-repeat: no-repeat;
+		background-attachment: fixed;
+		background-position: center;
+		color: #2f4945;
+	}
 
-div.buttons button {
-	margin: 0px 5px 0px 5px;
-}
+/* ********************************** */
+/* CONTAINER HEADER */
+	#container_header h1 {
+		color: #ab7522;
+		text-transform: uppercase;
+		font-size: 45px;
+		font-weight: bold;
+	}
 
-div.card {
-	margin: 10px;
-}
 
-#copyurl {
-	cursor: text;
-}
+/* CONTAINER CONTENT */
+	#container_content {
+		border: 1px solid #000;
+		background: #ab7522;
+		padding: 10px;
+                margin-top: 30px;
+	}
+	
+	#container_content_inner {
+		background: #fef8e5;
+		border: 1px solid #7a5f37;
+		padding: 20px;
+	}
+
+	#logo {
+		width: 100px;
+		margin-top: -90px;
+	}
+
+
+	#cloudcontainer {
+		background: url('/resources/img/clouds_no_parallax.png') bottom center no-repeat fixed;
+	        padding-top: 20px;
+                padding-bottom: 100px;
+	}
+
+/* ********************************** */
+/* CONTAINER FOOTER */
+	#container_footer {
+		border-top: 7px solid #ab7522;
+		background: #fef9e6;
+		min-height: 440px;
+	}
+	
+	#container_footer_inner {
+		margin-top: -50px;
+	}
+
+	#container_footer_inner div.header {
+		border: 1px solid #000;
+		background: #ab7522;
+		padding: 4px;
+		margin: 20px 0px 10px 0px;
+	}
+	#container_footer_inner div.header h2 {
+		margin:0px;
+		padding: 0px;
+		background: #fef8e5;
+		border: 1px solid #7a5f37;
+		padding: 10px;
+		text-transform: uppercase;
+		text-align: center;
+		font-size: 20px;
+		font-weight: normal;
+	}
+/* ********************************** */
+/* BUTTONS */
+	a.btn-primary,
+	button.btn-primary,
+	button.btn-success {
+		background: #2f4945;
+		border: 1px solid #2f4945;
+	}
+	a.btn-primary:hover,
+	button.btn-primary:hover,
+	button.btn-success:hover {
+		background: #356e6a;
+	}
+
+/* ********************************** */
+/* STEP: CREATE INVITE */
+	#container_content_inner label {
+		font-family: 'Handlee', "Helvetica Neue",Helvetica,Arial,sans-serif;
+		font-size: large;
+	}
+	#container_content_inner input,
+	#container_content_inner select,
+	#container_content_inner textarea {
+		border: 1px solid #2f4945;
+		color: #2f4945;
+	}
+	
+	#container_content_inner button {
+		background: #2f4945;
+		border: 1px solid #2f4945;
+	}
+	#container_content_inner button:hover {
+		background: #356e6a;
+	}
+
+/* ********************************** */
+/* STEP: SEND INVITE */
+	#sendUrlContainer {
+		text-align: center;
+		margin-bottom: 7px;
+	}
+	#sendUrlContainer input {
+		text-align: center;
+	}
+	div.buttons {
+		margin-bottom: 40px;
+	}	
+
+	div.buttons button {
+		margin: 0px 5px 0px 5px;
+	}
+	#copyurl {
+		cursor: text;
+	}
+
+	#sendUrlContainer,
+	.alert-warning {
+		border: 1px solid #ab7522;
+        background: #fdf8e5;
+		color: #2f4945;
+	}
+
+/* ********************************** */
+/* RECIPIENT VIEW */
+	#content_header_spacer {
+		margin-top: 70px;
+	}
+
+
+/* ********************************** */
+/* ELEMENT: CARD */
+	.card {
+		font-family: 'Handlee', "Helvetica Neue",Helvetica,Arial,sans-serif;
+	}
+	.card h1 {
+		font-family: 'Handlee', "Helvetica Neue",Helvetica,Arial,sans-serif;
+		font-weight: bold;
+	}
+	
+	

@@ -1,8 +1,8 @@
-<div class="card col-xs-6" id="theCard">
+<div class="card" id="theCard">
 	<h1>{{sender}} unner deg å delta på UKM</h1>
 	<p class="lead">{{recipient}}, {{sender}} mener du bør delta på UKM med {{category}}</p>
 	
 	{% if message|length > 0 %}
-	<p><strong>{{sender}} skrev:</strong><br />{{message}}</p>
+	<p><strong>{{sender}} skrev også en melding til deg:</strong><br />{{message}}</p>
 	{% endif %}
 </div>
