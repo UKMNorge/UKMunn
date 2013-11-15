@@ -2,10 +2,15 @@ jQuery(document).on('click', '#sendFace', function(){
 		window.open('//facebook.com/sharer.php?u='+jQuery('#copyurl').val(), 'FBSHARE', 'width=500,height=300');
 });
 
+jQuery(document).on('click', '#sendManual', function(){
+	jQuery('#sendUrlContainer').slideDown();
+	jQuery('#actionButtons').slideUp();
+});
 
 jQuery(document).on('click', '#cancelMore', function(){
 	jQuery('#collectMore').html('').slideUp();
 	jQuery('#actionButtons').slideDown();
+	jQuery('#sendUrlContainer').slideUp();
 });
 
 

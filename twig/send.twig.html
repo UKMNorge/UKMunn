@@ -6,20 +6,23 @@
 	<input type="hidden" value="{{recipient}}" name="recipient" id="recipient" />
 	<input type="hidden" value="{{url.print}}{{invite.urlID}}/" name="printurl" id="printurl" />
 	<input type="hidden" value="{{invite.urlID}}" name="urlID" id="urlID" />
-	<div class="alert alert-info" id="sendUrlContainer">
-		<input type="text" class="form-control" readonly="readonly" value="{{url.base}}{{invite.urlID}}/" id="copyurl" />
-		Du kan kopiere og sende denne adressen til {{recipient}}, eller du kan trykke på en av knappene nedenfor
-	</div>
 
 	<div class="buttons" id="actionButtons">
-		<button class="btn btn-primary btn-small pull-right" id="sendPrint">Skriv ut</button>
-		<button class="btn btn-primary btn-small pull-right" id="sendMail">Send som e-post</button>
-		<button class="btn btn-primary btn-small pull-right" id="sendSMS">Send som SMS</button>
-		<button class="btn btn-primary btn-small pull-right" id="sendFace">Send på facebook</button>
+		<button class="btn btn-primary btn-small" id="sendFace">Send på facebook</button>
+		<button class="btn btn-primary btn-small" id="sendSMS">Send som SMS</button>
+		<button class="btn btn-primary btn-small" id="sendMail">Send som e-post</button>
+		<button class="btn btn-primary btn-small" id="sendPrint">Skriv ut</button>
+		<button class="btn btn-primary btn-small" id="sendManual">Send på annen måte</button>
 		<div class="clearfix"></div>
 	</div>
 	
-	<div class="alert alert-warning" id="collectMore" style="display:none;"></div>
+	<div class="alert alert-info col-xs-12 col-sm-8 col-sm-offset-2" id="sendUrlContainer" style="display:none">
+		Kopier og send denne adressen til {{recipient}}
+		<input type="text" class="form-control" readonly="readonly" value="{{url.base}}{{invite.urlID}}/" id="copyurl" />
+		<a href="#" id="cancelMore">avbryt, vis andre sendealternativer</a>
+	</div>
+
+	<div class="alert alert-warning col-xs-12 col-sm-8 col-sm-offset-2" id="collectMore" style="display:none;"></div>
 {% endblock %}
 	
 	
