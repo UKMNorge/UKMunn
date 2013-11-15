@@ -27,7 +27,7 @@ if( mysql_num_rows( $res ) >= $MAXSEND ) {
 			$sms->text('Hei! Noen unner deg en UKM-opplevelse. Se '. $TWIG['url']->base .$_POST['send_url'].'/')
 				->to($_POST['send_to'])
 				->from('UKM')
-				;//->ok();
+				->ok();
 			break;
 
 
