@@ -1,8 +1,23 @@
 <div class="card" id="theCard">
-	<h1>{{sender}} unner deg å delta på UKM</h1>
-	<p class="lead">{{recipient}}, {{sender}} mener du bør delta på UKM med {{category}}</p>
 	
-	{% if message|length > 0 %}
-	<p><strong>{{sender}} skrev også en melding til deg:</strong><br />{{message}}</p>
-	{% endif %}
+	<div class="col-xs-12 col-sm-4 pull-right" id="card_container_right">
+		<div class="col-xs-6 col-sm-12 col-sm-offset-0 pull-right">
+			<img src="/resources/img/frimerke.jpg" style="max-width: 100%;" />
+		</div>
+		
+		<div id="card_container_meta">
+			<div id="card_container_meta_to"><label>til</label> {{recipient}}</div>
+			<div id="card_container_meta_from"><label>fra</label> {{sender}}</div>
+		</div>
+		
+	</div>	
+	
+	<div id="card_container_message" class="col-xs-12 col-sm-8">
+		<h1>Hei {{recipient}}!</h1>
+		<p class="lead">
+			{% embed "card.oppfordre.twig.html" with {'sender': 'Jeg', 'recipient': 'deg'} %}{% endembed %}
+		</p>	
+		<p>{{message}}</p>
+		<p>Hilsen {{sender_firstname}}</p>
+	</div>
 </div>

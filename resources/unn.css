@@ -11,14 +11,21 @@
 
 /* ********************************** */
 /* CONTAINER HEADER */
-	#container_header h1 {
-		color: #ab7522;
-		text-transform: uppercase;
-		font-size: 45px;
-		font-weight: bold;
+	#container_header {
+		border: 1px solid #000;
+		background: #ab7522;
+		padding: 10px;
+        margin-top: 40px;
+		text-align:center;
+	}
+	
+	#container_header_inner {
+		background: #fef8e5;
+		border: 1px solid #7a5f37;
+		padding: 20px;
 	}
 
-
+/* ********************************** */
 /* CONTAINER CONTENT */
 	#container_content {
 		border: 1px solid #000;
@@ -54,14 +61,14 @@
 	}
 	
 	#container_footer_inner {
-		margin-top: -50px;
+		margin-top: -30px;
 	}
 
 	#container_footer_inner div.header {
 		border: 1px solid #000;
 		background: #ab7522;
 		padding: 4px;
-		margin: 20px 0px 10px 0px;
+		margin-bottom: 15px;
 	}
 	#container_footer_inner div.header h2 {
 		margin:0px;
@@ -79,8 +86,9 @@
 	a.btn-primary,
 	button.btn-primary,
 	button.btn-success {
-		background: #2f4945;
+		background: #ab7522;
 		border: 1px solid #2f4945;
+		border-radius: 0px;
 	}
 	a.btn-primary:hover,
 	button.btn-primary:hover,
@@ -108,7 +116,10 @@
 	#container_content_inner button:hover {
 		background: #356e6a;
 	}
-
+	
+	#saved {
+		margin: 10px 0px 0px 0px;
+	}
 /* ********************************** */
 /* STEP: SEND INVITE */
 	#sendUrlContainer {
@@ -154,3 +165,34 @@
 	}
 	
 	
+	#card_container_right {
+		border-bottom: 2px solid #2f4945;
+		margin-bottom: 20px;
+		padding-bottom: 10px;
+		font-size: 22px;
+	}
+	#card_container_meta div {
+		margin-top: 10px;
+	}
+	#card_container_meta label {
+		font-size: 16px;
+		font-weight: 100;
+	}
+	
+
+@media (min-width: 768px) {
+	#card_container_right {
+		border: none;
+		padding: 0px;
+		margin: 0px;
+		padding: 0px 0px 0px 30px;
+	}
+	#card_container_right img {
+		margin-bottom: 10px; 
+	}
+		
+	#card_container_message {
+		border-right: 2px solid #2f4945;
+		font-size: 16px;
+	}
+}

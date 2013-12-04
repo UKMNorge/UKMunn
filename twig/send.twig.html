@@ -1,36 +1,9 @@
 {% extends "layout.twig.html" %}
 
 {% block content_header %}
-	<h1>Send kortet til {{recipient}}</h1>
-
-	<input type="hidden" value="{{recipient}}" name="recipient" id="recipient" />
-	<input type="hidden" value="{{url.print}}{{invite.urlID}}/" name="printurl" id="printurl" />
-	<input type="hidden" value="{{invite.urlID}}" name="urlID" id="urlID" />
-
-	<div class="buttons" id="actionButtons">
-		<button class="btn btn-primary btn-small" id="sendFace">Send på facebook</button>
-		<div class="col-xs-12 visible-xs"></div>
-		<button class="btn btn-primary btn-small" id="sendSMS">Send som SMS</button>
-		<div class="col-xs-12 visible-xs"></div>
-		<button class="btn btn-primary btn-small" id="sendMail">Send som e-post</button>
-		<div class="col-xs-12 visible-xs"></div>
-		<button class="btn btn-primary btn-small" id="sendPrint">Skriv ut</button>
-		<div class="col-xs-12 visible-xs"></div>
-		<button class="btn btn-primary btn-small" id="sendManual">Send på annen måte</button>
-		<div class="clearfix"></div>
-	</div>
-	
-	<div class="alert alert-info col-xs-12 col-sm-8 col-sm-offset-2" id="sendUrlContainer" style="display:none">
-		Kopier og send denne adressen til {{recipient}}
-		<input type="text" class="form-control" readonly="readonly" value="{{url.base}}{{invite.urlID}}/" id="copyurl" />
-		<a href="#" id="cancelMore">avbryt, vis andre sendealternativer</a>
-	</div>
-
-	<div class="alert alert-warning col-xs-12 col-sm-8 col-sm-offset-2" id="collectMore" style="display:none;"></div>
+	<h2>Slik ser kortet ditt ut</h2>
 {% endblock %}
-	
-	
-	
+
 	
 	
 	
@@ -46,12 +19,43 @@
 
 
 {% block content_footer %}
-	<div class="col-xs-12 col-md-6 col-md-offset-3">
-		<div class="header">
-			<h2>Kjenner du flere som burde delta på UKM?</h2>
+	<div class="col-xs-12">
+		<div class="header col-xs-12 col-md-8 col-md-offset-2">
+			<h2>Velg hvordan du vil sende kortet til {{recipient}}</h2>
 		</div>
-		<p>Det er fullt mulig å sende flere invitasjoner</p>
-		<a href="/" class="btn btn-primary">Lag ny invitasjon</a>
+		
+		
 		<div class="clearfix"></div>
+		<div class="col-xs-12 col-md-12" align="center">
+			<input type="hidden" value="{{recipient}}" name="recipient" id="recipient" />
+			<input type="hidden" value="{{url.print}}{{invite.urlID}}/" name="printurl" id="printurl" />
+			<input type="hidden" value="{{invite.urlID}}" name="urlID" id="urlID" />
+		
+			<div class="buttons" id="actionButtons">
+				<button class="btn btn-primary btn-small" id="sendFace">Send på facebook</button>
+				<div class="col-xs-12 visible-xs"></div>
+				<button class="btn btn-primary btn-small" id="sendSMS">Send som SMS</button>
+				<div class="col-xs-12 visible-xs"></div>
+				<button class="btn btn-primary btn-small" id="sendMail">Send som e-post</button>
+				<div class="col-xs-12 visible-xs"></div>
+				<button class="btn btn-primary btn-small" id="sendPrint">Skriv ut</button>
+				<div class="col-xs-12 visible-xs"></div>
+				<button class="btn btn-primary btn-small" id="sendManual">Send på annen måte</button>
+				<div class="clearfix"></div>
+			</div>
+			
+			<div class="alert alert-info col-xs-12 col-sm-8 col-sm-offset-2" id="sendUrlContainer" style="display:none">
+				Kopier og send denne adressen til {{recipient}}
+				<input type="text" class="form-control" readonly="readonly" value="{{url.base}}{{invite.urlID}}/" id="copyurl" />
+				<a href="#" id="cancelMore">avbryt, vis andre sendealternativer</a>
+			</div>
+		
+			<div class="alert alert-warning col-xs-12 col-sm-8 col-sm-offset-2" id="collectMore" style="display:none;"></div>
+			
+			<div id="thankyou" style="display:none;">
+			</div>
+			
+		</div>
+
 	</div>
 {% endblock %}

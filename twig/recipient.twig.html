@@ -1,40 +1,30 @@
 {% extends "layout.twig.html" %}
 
 {% block title %}
-	{{card.recipient}} burde delta på UKM!
+	{{card.recipient}} bør delta på UKM!
+{% endblock %}
+
+{% block opengraph %}
+	<link rel="canonical" href="{{card.canonical}}" />
+	<meta property="og:title" content="{{card.recipient}} bør delta på UKM!"/>
+	<meta property="og:description" content="{% embed "card.oppfordre.twig.html" with {'sender': card.sender, 'category': card.category, 'recipient': card.recipient} %}{% endembed %}"/>
+	<meta property="og:type" content="article" />
+	<meta property="og:image" content="{{url.base}}resources/img/frimerke.jpg" />
+	<meta property="og:url" content="{{card.canonical}}" />
+	<meta property="og:site_name" content="UNN NOEN UKM" />
+	<meta property="fb:admins" content="597605662" />
 {% endblock %}
 
 {% block content_header %}
-<div id="content_header_spacer"></div>
+	<style>#container_header { display: none; }</style>
 {% endblock %}
 
 {% block content %}
 	{% embed "card.twig.html" with card %}{% endembed %}
+	<div class="clearfix"></div>
 {% endblock %}
 
 
 {% block content_footer %}	
-	<div class="col-xs-12 col-md-6 pull-left">
-		<div class="header">
-			<h2>Hva er UKM?</h2>
-		</div>
-		<p>In sit amet dictum nisl, at sollicitudin felis. Ut volutpat enim sed lorem porttitor fermentum. Cras gravida, purus a ullamcorper mattis, dolor eros vehicula turpis, vel malesuada justo</p>
-		<a href="http://ukm.no" class="btn btn-mini btn-primary">Les mer</a>
-	</div>
-
-	<div class="col-xs-12 col-md-6 pull-left">
-		<div class="header">
-			<h2>Jeg vil delta!</h2>
-		</div>
-		<p>In sit amet dictum nisl, at sollicitudin felis. Ut volutpat enim sed lorem porttitor fermentum. Cras gravida, purus a ullamcorper mattis, dolor eros vehicula turpis, vel malesuada justo</p>
-		<a href="http://pamelding.ukm.no" class="btn btn-mini btn-primary">Start påmelding!</a>
-	</div>
-
-	<div class="col-xs-12 col-md-6 pull-left">
-		<div class="header">
-			<h2>Jeg kjenner også noen som burde delta!</h2>
-		</div>
-		<p>Quisque ut lorem eu dui adipiscing dapibus. Etiam sed magna ut nulla adipiscing mollis eu quis elit. Aenean rutrum enim velit, at iaculis risus egestas ac. Praesent purus dui, consectetur sit amet pellentesque eget, rhoncus non metus. Phasellus cursus diam quis felis volutpat bibendum.</p>
-		<a href="{{url.base}}" class="btn btn-mini btn-primary">Inviter noen til UKM!</a>
-	</div>
+	{% embed "infofooter.twig.html" %}{% endembed %}
 {% endblock %}

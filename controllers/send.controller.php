@@ -1,11 +1,13 @@
 <?php
-$MAXSEND = 5;
+$MAXSEND = 30;
 
 $info = explode('-', $_POST['send_url']);
 $ID = $info[0];
 $PASS = $info[1];
 
 $ERROR = false;
+
+require_once('card.controller.php');
 
 // CHECK IF POPULAR
 $SQL = new SQL("SELECT *
@@ -14,7 +16,8 @@ $SQL = new SQL("SELECT *
 				array('id' => $_POST['send_to']));
 $res = $SQL->run();
 if( mysql_num_rows( $res ) >= $MAXSEND ) {
-	$ERROR = 'Mottakeren har allerede fått mer enn '.$MAXSEND.' invitasjoner til å delta på UKM';
+	$ERROR = $TWIG['card']['recipient']. ' har allerede fått '.$MAXSEND.' invitasjoner til å delta på UKM. '
+		   .'For å ikke spamme '. $TWIG['card']['recipient'].' sender systemet maks '. $MAXSEND .' invitasjoner per mottaker';
 	$_SESSION['error'] = $ERROR;
 } else {
 	switch( $_POST['send_type'] ) {
@@ -36,9 +39,7 @@ if( mysql_num_rows( $res ) >= $MAXSEND ) {
 			require_once('UKM/mail.class.php');
 
 			define('TWIG_PATH', str_replace('controllers','', __DIR__));
-			
-			require_once('card.controller.php');
-			
+						
 			$text = TWIGrender('card', $TWIG['card']);
 
 			$text .= '<p><a href="'. $TWIG['url']->base . $TWIG['card']['id'].'-'.$TWIG['card']['url'].'/">Les mer</a>';

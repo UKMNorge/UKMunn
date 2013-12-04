@@ -24,3 +24,10 @@ $TWIG['invite'] = new StdClass;
 $TWIG['invite']->id = $ID;
 $TWIG['invite']->pass = $password;
 $TWIG['invite']->urlID = $TWIG['invite']->id .'-'. $TWIG['invite']->pass;
+
+
+$spacePOS = strpos($TWIG['sender'], ' ');
+if($spacePOS > 0 )
+	$TWIG['sender_firstname'] = substr( $TWIG['sender'], 0, $spacePOS );
+else
+	$TWIG['sender_firstname'] = $TWIG['sender'];

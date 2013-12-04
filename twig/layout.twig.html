@@ -4,6 +4,7 @@
 		<meta charset="utf-8">
 		<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
 		<title>{% block title %}Unn noen en UKM-opplevelse!{% endblock %}</title>
+		{% block opengraph %}{% endblock %}
 		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
 		<meta name="apple-mobile-web-app-capable" content="yes" />
 		<meta name="description" content="" />
@@ -19,21 +20,22 @@
 		<script src="http://netdna.bootstrapcdn.com/bootstrap/3.0.2/js/bootstrap.min.js"></script>
 		<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.2.0/angular.min.js"></script>
 		<script src="/resources/unn.js"></script>
+		<script src="/resources/jqBootstrapValidation.js"></script>
 		<script src="/resources/handlebars.js"></script>
-
+		<script>{% block script %}{% endblock %}</script>
 	</head>
 	
 	<body>
 		<div id="cloudcontainer">
 			<div class="container" id="guicontainer">
-				<div class="col-xs-12" align="center" id="container_header">
-					{% block content_header %}{% endblock %}
+				<div class="col-xs-12 col-md-8 col-md-offset-2" id="container_header">
+					<div id="container_header_inner">
+						{% block content_header %}{% endblock %}
+					</div>
 				</div>
-				<div class="col-xs-12 col-sm-6 col-sm-offset-3" id="container_content">
+				<div class="clearfix"></div>
+				<div class="col-xs-12 col-md-8 col-md-offset-2" id="container_content">
 					<div id="container_content_inner">
-						<div align="center" id="logocontainer">
-							<img src="http://grafikk.ukm.no/profil/logo/UKM_logo_emblem.png" id="logo" />
-						</div>
 						{% block content %}{% endblock %}
 					</div>
 				</div>

@@ -2,11 +2,11 @@
 	<h4>Vi trenger litt mer info</h4>
 	<div class="form-group">
 		<label for="sender">Hva er {{askfor}} til {{recipient}}?</label>
-		<input type="{{askfor_type}}" class="form-control" id="askformore" name="send_to" />
+		<input type="{{askfor_type}}" class="form-control" id="askformore" name="send_to"  required/>
 		<input type="hidden" id="send_url" name="send_url" value="{{send_url}}" />
 		<input type="hidden" id="send_type" name="send_type" value="{{method}}" />
 	</div>
-	<button class="btn btn-success btn-small">{{action}}</button>
+	<button type="submit" class="btn btn-success btn-small">{{action}}</button>
 	<small>eller</small>
 	<a href="#" id="cancelMore">avbryt, send på annen måte</a>
 </form>

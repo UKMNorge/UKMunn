@@ -1,28 +1,45 @@
 {% extends "layout.twig.html" %}
 
+{% block opengraph %}
+	<link rel="canonical" href="{{url.base}}" />
+	<meta property="og:title" content="Unn noen UKM"/>
+	<meta property="og:description" content="Kjenner du en kreativ ungdom som fortjener en minneverdig opplevelse?"/>
+	<meta property="og:type" content="article" />
+	<meta property="og:image" content="{{url.base}}resources/img/frimerke.jpg" />
+	<meta property="og:url" content="{{url.base}}" />
+	<meta property="og:site_name" content="UNN NOEN UKM" />
+	<meta property="fb:admins" content="597605662" />
+{% endblock %}
+
+
+
 {% block content_header %}
-	<h1>Unn noen UKM!</h1>
-	<p class="lead">Kjenner du en ungdom som har et talent, og som fortjener en stor opplevelse?</p>
-	<p>Fortell dem at de er flinke, og anbefal dem å delta på Ungdommens kulturmønstring</p>
+	<p class="lead">Kjenner du en kreativ ungdom som fortjener en minneverdig opplevelse?</p>
+{% endblock %}
+
+{% block script %}
+  jQuery(document).ready(function(){
+  	jQuery("input,select,textarea").not("[type=submit]").jqBootstrapValidation(); 
+  });
 {% endblock %}
 
 {% block content %}
 	<form method="POST" action="{{url.base}}">
 		<div class="form-group">
 			<label for="recipient">Til</label>
-			<input type="text" class="form-control" id="recipient" name="recipient" ng-model="recipient" placeholder="Skriv navn på mottaker">
+			<input type="text" class="form-control" id="recipient" name="recipient" ng-model="recipient" placeholder="Skriv fornavn på mottaker" required>
 		</div>
 
 
 		<div class="form-group">
 			<label for="sender">Fra</label>
-			<input type="text" class="form-control" id="sender" name="sender" placeholder="Skriv ditt fulle navn">
+			<input type="text" class="form-control" id="sender" name="sender" placeholder="Skriv ditt fornavn og etternavn" required>
 		</div>
 
 		<div class="form-group">
-			<label for="category">Jeg unner {% raw %}{{recipient || 'deg'}}{% endraw %} å delta på UKM med </label>
+			<label for="category">Velg gjerne en kategori</label>
 			<select id="category" class="form-control" name="category">
-				<option value="noe" disabled="disabled" selected="selected">Velg kategori</option>
+				<option value="" selected="selected">Ingen kategori valgt</option>
 				{% for cat in categories %}
 					<option value="{{cat}}">{{cat}}</option>
 				{% endfor %}
@@ -36,5 +53,15 @@
 		</div>		
 		
 		<button class="btn btn-success" type="submit" id="create" name="create">Lag invitasjon</button>
+		<p id="saved">
+			<small>OBS: Alle invitasjoner blir lagret</small>
+		</p>
 	</form>	
-  {% endblock %}
+{% endblock %}
+
+
+
+
+{% block content_footer %}	
+	{% embed "infofooter.twig.html" %}{% endembed %}
+{% endblock %}
