@@ -24,6 +24,29 @@
 		border: 1px solid #7a5f37;
 		padding: 20px;
 	}
+	
+	#container_header_inner,
+	#container_header_inner p {
+		font-weight: bold;
+		font-size: 30px;
+		margin: 0px;
+	}
+
+
+	#container_logo {
+		text-align: center;
+		padding: 0px;
+		margin: 0px;
+		margin-bottom: -100px;
+		position: relative;
+		z-index:1000;
+	}
+	
+	#container_logo img {
+		z-index:1000;
+	}
+
+
 
 /* ********************************** */
 /* CONTAINER CONTENT */
