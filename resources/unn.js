@@ -55,3 +55,21 @@ function thankyou( sendMethod ) {
 	jQuery('#actionButtons').slideUp();
 
 }
+jQuery(document).on('click','#cookies_toggle', function(){
+    if(jQuery(this).attr('data-action') == 'show') {
+        jQuery( jQuery(this).attr('data-toggle') ).slideDown();
+        jQuery(this).attr('data-action', 'hide');
+    } else {
+        jQuery(this).attr('data-action', 'show');
+        jQuery( jQuery(this).attr('data-toggle') ).slideUp();
+    }
+});
+jQuery(document).on('click','#cookies_hide', function(){
+    if(jQuery(this).attr('data-action') == 'show') {
+        jQuery( jQuery(this).attr('data-toggle') ).slideDown();
+        jQuery(this).attr('data-action', 'hide');
+    } else {
+        jQuery(this).attr('data-action', 'show');
+        jQuery( jQuery(this).attr('data-toggle') ).slideUp();
+    }
+});

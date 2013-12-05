@@ -27,6 +27,9 @@
 	
 	<body>
 		<div id="cloudcontainer">
+			<div id="safarikjeks" style="display:none;">
+				{% include "cookies.twig.html" %}
+			</div>
 			<div id="container_logo">
 				<img src="/resources/img/logo.png" id="unn_logo" />
 			</div>
@@ -49,5 +52,9 @@
 				{% block content_footer %}{% endblock %}
 			</div>
 		</div>
-		</body>
+		<div id="mariekjeks">
+			<img src="/resources/img/info.png">
+			<a href="#safarikjeks" id="cookies_toggle" data-action="show" data-toggle="#safarikjeks">Cookies</a>
+		</div>
+	</body>
 </html>

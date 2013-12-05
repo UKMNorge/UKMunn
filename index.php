@@ -73,5 +73,5 @@ $app->get('/print/{ID}-{PASS}/', function($ID, $PASS) use($app, $TWIG) {
 }); 
 
 
-$app->run(); 
+$app->run();
 ?>

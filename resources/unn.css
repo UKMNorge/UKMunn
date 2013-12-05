@@ -14,7 +14,7 @@
 	#container_header {
 		border: 1px solid #000;
 		background: #ab7522;
-		padding: 10px;
+		padding: 5px;
         margin-top: 40px;
 		text-align:center;
 	}
@@ -36,14 +36,15 @@
 	#container_logo {
 		text-align: center;
 		padding: 0px;
-		margin: 0px;
+		margin: 0px auto;;
 		margin-bottom: -100px;
 		position: relative;
-		z-index:1000;
+		z-index: 1000;
+		max-width: 80%;
 	}
 	
 	#container_logo img {
-		z-index:1000;
+		z-index: 1000;
 	}
 
 
@@ -53,7 +54,7 @@
 	#container_content {
 		border: 1px solid #000;
 		background: #ab7522;
-		padding: 10px;
+		padding: 5px;
         margin-top: 40px;
 	}
 	
@@ -201,7 +202,30 @@
 		font-size: 16px;
 		font-weight: 100;
 	}
-	
+
+/* ********************************** */
+/* COOKIES */
+	#mariekjeks {
+		position: fixed;
+		bottom: 0px;
+		right: 0px;
+		width: 80px;
+		height: 80px;
+		z-index: 9001; /* ITS OVER 9000 */
+		padding: 25px 10px 0 0;
+		background: #FFF;
+		font-size: 12px;
+		text-align: right;
+		border-top-left-radius: 80px;
+		border-top: 1px solid #000;
+	}
+	#mariekjeks img {
+		padding: 0 10px;
+	}
+	#safarikjeks {
+		background: #FFF;
+		padding: 50px;
+	}
 
 @media (min-width: 768px) {
 	#card_container_right {
@@ -217,5 +241,27 @@
 	#card_container_message {
 		border-right: 2px solid #2f4945;
 		font-size: 16px;
+	}
+}
+@media (max-width: 768px) {
+	#container_header_inner p {
+		font-size: 18px;
+	}
+	#container_content {
+		margin-top: 10px;
+	}
+	.container {
+		padding-bottom: 10px;
+	}
+	#cloudcontainer {
+		padding-bottom: 30px;
+	}
+}
+@media (max-width: 572px) {
+	#container_logo {
+		margin-bottom: -90px;
+	}
+	#container_logo img {
+		width: 100%;
 	}
 }
