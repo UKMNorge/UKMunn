@@ -1,3 +1,4 @@
+{% spaceless %}
 <!DOCTYPE html>
 <html lang="en" ng-app>
 	<head>
@@ -23,6 +24,8 @@
 		<script src="/resources/jqBootstrapValidation.js"></script>
 		<script src="/resources/handlebars.js"></script>
 		<script>{% block script %}{% endblock %}</script>
+		
+		<script type="text/javascript">var _gaq=_gaq||[];_gaq.push(["_setAccount","UA-46216680-8"]);_gaq.push(["_trackPageview"]);(function(){var e=document.createElement("script");e.type="text/javascript";e.async=true;e.src=("https:"==document.location.protocol?"https://":"http://")+"stats.g.doubleclick.net/dc.js";var t=document.getElementsByTagName("script")[0];t.parentNode.insertBefore(e,t)})()</script>
 	</head>
 	
 	<body>
@@ -58,3 +61,4 @@
 		</div>
 	</body>
 </html>
+{% endspaceless %}
