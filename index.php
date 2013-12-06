@@ -89,7 +89,7 @@ $TWIG = array('url' => $url);
 	
 	
 	
-	$app->get('/{ID}-{PASS}/', function($ID, $PASS) use($app, $TWIG) {
+	$app->get('/kort/{ID}-{PASS}/', function($ID, $PASS) use($app, $TWIG) {
 		require_once('controllers/card.controller.php');	
 		return $app['twig']->render( 'recipient.twig.html', $TWIG );
 	}); 

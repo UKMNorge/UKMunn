@@ -13,7 +13,7 @@ foreach( $TWIG['card'] as $key => $val )
 	$TWIG['card'][$key] = utf8_encode( $val );
 	
 
-$TWIG['card']['canonical'] = $TWIG['url']->base . $TWIG['card']['id'] .'-'. $TWIG['card']['url'] .'/';
+$TWIG['card']['canonical'] = $TWIG['url']->base .'kort/'. $TWIG['card']['id'] .'-'. $TWIG['card']['url'] .'/';
 
 
 $name = explode(' ', $TWIG['card']['sender']);
