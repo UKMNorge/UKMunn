@@ -229,7 +229,8 @@
 	}
 	#safarikjeks {
 		background: #FFF;
-		padding: 50px;
+		padding: 30px;
+		margin-top: -20px;
 	}
 
 @media (min-width: 768px) {

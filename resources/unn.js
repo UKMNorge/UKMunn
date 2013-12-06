@@ -58,7 +58,14 @@ function thankyou( sendMethod ) {
 	jQuery('#actionButtons').slideUp();
 
 }
-jQuery(document).on('click','#cookies_toggle', function(){
+jQuery(document).on('click', '#cookies_toggle', function(e){
+	e.preventDefault();
+	jQuery('#mariekjeks').click();
+	return false;
+});
+jQuery(document).on('click','#mariekjeks', function(e){
+	e.preventDefault();
+
     if(jQuery(this).attr('data-action') == 'show') {
         jQuery( jQuery(this).attr('data-toggle') ).slideDown();
         jQuery(this).attr('data-action', 'hide');
@@ -68,13 +75,8 @@ jQuery(document).on('click','#cookies_toggle', function(){
     }
 });
 jQuery(document).on('click','#cookies_hide', function(){
-    if(jQuery(this).attr('data-action') == 'show') {
-        jQuery( jQuery(this).attr('data-toggle') ).slideDown();
-        jQuery(this).attr('data-action', 'hide');
-    } else {
-        jQuery(this).attr('data-action', 'show');
+        jQuery('#mariekjeks').attr('data-action', 'show');
         jQuery( jQuery(this).attr('data-toggle') ).slideUp();
-    }
 });
 
 function log( method ) {
