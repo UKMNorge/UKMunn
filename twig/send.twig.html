@@ -8,6 +8,7 @@
 	
 	
 {% block content %}
+	<input type="hidden" name="cardID" id="cardID" value="{{invite.urlID}}" />
 	<div class="clearfix"></div>
 	{% embed "card.twig.html" %}{% endembed %}
 	<div class="clearfix"></div>

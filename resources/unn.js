@@ -1,11 +1,13 @@
 jQuery(document).on('click', '#sendFace', function(){
 	window.open('//facebook.com/sharer.php?u='+jQuery('#copyurl').val(), 'FBSHARE', 'width=500,height=300');
 	thankyou( 'facebook' );
+	log('facebook');
 });
 
 jQuery(document).on('click', '#sendManual', function(){
 	jQuery('#sendUrlContainer').slideDown();
 	jQuery('#actionButtons').slideUp();
+	log('manual');
 });
 
 jQuery(document).on('click', '#cancelMore, #cancelThankYou', function(){
@@ -35,6 +37,7 @@ jQuery(document).on('click', '#sendMail', function(){
 jQuery(document).on('click', '#sendPrint', function(){
 	window.open(jQuery('#printurl').val(), 'PRINT', 'width=800,height=400');	
 	thankyou( 'utskrift' );
+	log('print');
 });
 
 function askformore( data ) {
@@ -73,3 +76,9 @@ jQuery(document).on('click','#cookies_hide', function(){
         jQuery( jQuery(this).attr('data-toggle') ).slideUp();
     }
 });
+
+function log( method ) {
+	jQuery.post('/log/' + jQuery('#cardID').val() + '/', 
+				{'send_type': method},
+				function(){});
+}

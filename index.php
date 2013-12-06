@@ -25,11 +25,23 @@ $url->print		= $url->base.'print/';
 $TWIG = array('url' => $url);
 
 /* ****************** ROUTING ****************** */
+
+	$app->post('/log/{ID}-{hash}/', function($ID, $hash) use($app, $TWIG) {
+		$SQL = new SQLins('ukm_unn_send');
+		$SQL->charset();
+		$SQL->add('unn_id', $ID);
+		$SQL->add('send_type', $_POST['send_type']);
+		$SQL->add('send_to', 'unknown');
+		$SQL->add('sender_ip', $_SERVER['REMOTE_ADDR']);
+		$SQL->run();
+		return 'OK';
+	});
+
+	/* ****************** LESS CSS ****************** */
 	$app->get('/less/{filename}', function($filename) use($app, $TWIG) {
 		header("Content-Type: text/css");
 		header("X-Content-Type-Options: nosniff");
 		$filename = 'resources/'. $filename;
-		/* ****************** LESS CSS ****************** */
 		$less = new lessc;
 		try {
 			echo $less->compileFile($filename);
