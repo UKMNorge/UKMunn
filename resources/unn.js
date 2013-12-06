@@ -1,5 +1,5 @@
 jQuery(document).on('click', '#sendFace', function(){
-	window.open('//facebook.com/sharer.php?u='+jQuery('#copyurl').val(), 'FBSHARE', 'width=500,height=300');
+	window.open('//facebook.com/sharer.php?u='+jQuery('#copyurl').html(), 'FBSHARE', 'width=500,height=300');
 	thankyou( 'facebook' );
 	log('facebook');
 });

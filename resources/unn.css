@@ -175,6 +175,11 @@
         background: #fdf8e5;
 		color: #2f4945;
 	}
+	
+	#copyurl {
+		background: rgb(238, 238, 238);
+	}
+	
 
 /* ********************************** */
 /* RECIPIENT VIEW */
