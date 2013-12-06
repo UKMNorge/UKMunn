@@ -2,6 +2,8 @@
 	"require": {
 		"symfony/symfony": "2.3.*",
 		"silex/silex": "~1.1",
-		"twig/twig": "1.*"
+		"twig/twig": "1.*",
+		"leafo/lessphp": "0.4.0",
+		"mrclay/minify": "*"
 	}
 }

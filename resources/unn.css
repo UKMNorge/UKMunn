@@ -8,6 +8,11 @@
 		background-position: center;
 		color: #2f4945;
 	}
+	
+	a {
+		color: #ab7522;
+		font-weight: bold;
+	}
 
 /* ********************************** */
 /* CONTAINER HEADER */
@@ -72,8 +77,8 @@
 
 	#cloudcontainer {
 		background: url('/resources/img/clouds_no_parallax.png') bottom center no-repeat fixed;
-	        padding-top: 20px;
-                padding-bottom: 100px;
+		padding-top: 20px;
+		padding-bottom: 100px;
 	}
 
 /* ********************************** */
