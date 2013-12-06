@@ -39,11 +39,13 @@ if( mysql_num_rows( $res ) >= $MAXSEND ) {
 			require_once('UKM/mail.class.php');
 
 			define('TWIG_PATH', str_replace('controllers','', __DIR__));
-						
+			$TWIG['card']['mailmode'] = true;
+			$TWIG['card']['url'] = $TWIG['url'];
+			if( !empty( $TWIG['card']['message'] ) ) {
+				$message = explode(' ', $TWIG['card']['message']);
+				$TWIG['card']['message'] = implode(' ', array_splice($TWIG['card']['message'], 0, 8) );
+			}
 			$text = TWIGrender('card', $TWIG['card']);
-
-			$text .= '<p><a href="'. $TWIG['url']->base . $TWIG['card']['id'].'-'.$TWIG['card']['url'].'/">Les mer</a>';
-
 			$mail = new UKMmail();
 			$mail->subject('Noen unner deg en UKM-opplevelse!')
 				 ->to($_POST['send_to'])

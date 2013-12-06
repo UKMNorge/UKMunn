@@ -17,7 +17,9 @@
 		<p class="lead">
 			{% embed "card.oppfordre.twig.html" with {'sender': 'Jeg', 'recipient': 'deg'} %}{% endembed %}
 		</p>
-		{% if card.message is empty %}
+		{% if mailmode is defined and message is empty %}
+			<p>UKM er et nettverk av små lokale festivaler hvor ungdom kan...</p> 
+		{% elseif message is empty %}
 			<p>
 				UKM er et nettverk av små lokale festivaler hvor ungdom kan delta med alle slags kulturuttrykk.
 				UKM er ingen konkurranse, og de aller fleste kommuner i landet arrangerer en lokalmønstring. 
@@ -27,5 +29,10 @@
 			<p>{{message}}</p>
 		{% endif %}
 		<p>Hilsen {{sender_firstname}}</p>
+		
+		{% if mailmode is defined %}
+			<p><a href="{{canonical}}">Klikk her for å se kortet mitt eller starte påmelding</a></p>
+		{% endif %}
+		<p>
 	</div>
 </div>
