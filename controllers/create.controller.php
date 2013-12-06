@@ -2,8 +2,7 @@
 require_once('UKM/inc/password.inc.php');
 require_once('UKM/inc/handlebars.inc.php');
 
-$TWIG = array_merge($TWIG, $_POST);
-
+$TWIG['card'] = $_POST;
 $password = UKM_ordpass();
 
 $password = md5( rand(0,100) . $password . rand(100, 10000) );
@@ -25,9 +24,5 @@ $TWIG['invite']->id = $ID;
 $TWIG['invite']->pass = $password;
 $TWIG['invite']->urlID = $TWIG['invite']->id .'-'. $TWIG['invite']->pass;
 
-
-$spacePOS = strpos($TWIG['sender'], ' ');
-if($spacePOS > 0 )
-	$TWIG['sender_firstname'] = substr( $TWIG['sender'], 0, $spacePOS );
-else
-	$TWIG['sender_firstname'] = $TWIG['sender'];
+$PASS = $password;
+require_once('controllers/card.controller.php');

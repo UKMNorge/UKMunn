@@ -16,8 +16,16 @@
 		<h1>Hei {{recipient}}!</h1>
 		<p class="lead">
 			{% embed "card.oppfordre.twig.html" with {'sender': 'Jeg', 'recipient': 'deg'} %}{% endembed %}
-		</p>	
-		<p>{{message}}</p>
+		</p>
+		{% if card.message is empty %}
+			<p>
+				UKM er et nettverk av små lokale festivaler hvor ungdom kan delta med alle slags kulturuttrykk.
+				UKM er ingen konkurranse, og de aller fleste kommuner i landet arrangerer en lokalmønstring. 
+			</p>
+			<p>Du bør sjekke det ut!</p>
+		{% else %}
+			<p>{{message}}</p>
+		{% endif %}
 		<p>Hilsen {{sender_firstname}}</p>
 	</div>
 </div>

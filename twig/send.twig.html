@@ -10,7 +10,7 @@
 {% block content %}
 	<input type="hidden" name="cardID" id="cardID" value="{{invite.urlID}}" />
 	<div class="clearfix"></div>
-	{% embed "card.twig.html" %}{% endembed %}
+	{% embed "card.twig.html" with card %}{% endembed %}
 	<div class="clearfix"></div>
 {% endblock %}
 
@@ -22,13 +22,13 @@
 {% block content_footer %}
 	<div class="col-xs-12">
 		<div class="header col-xs-12 col-md-8 col-md-offset-2">
-			<h2>Velg hvordan du vil sende kortet til {{recipient}}</h2>
+			<h2>Velg hvordan du vil sende kortet til {{card.recipient}}</h2>
 		</div>
 		
 		
 		<div class="clearfix"></div>
 		<div class="col-xs-12 col-md-12" align="center">
-			<input type="hidden" value="{{recipient}}" name="recipient" id="recipient" />
+			<input type="hidden" value="{{card.recipient}}" name="recipient" id="recipient" />
 			<input type="hidden" value="{{url.print}}{{invite.urlID}}/" name="printurl" id="printurl" />
 			<input type="hidden" value="{{invite.urlID}}" name="urlID" id="urlID" />
 		
@@ -46,7 +46,7 @@
 			</div>
 			
 			<div class="alert alert-info col-xs-12 col-sm-8 col-sm-offset-2" id="sendUrlContainer" style="display:none">
-				Kopier og send denne adressen til {{recipient}}
+				Kopier og send denne adressen til {{card.recipient}}
 				<input type="text" class="form-control" readonly="readonly" value="{{url.base}}{{invite.urlID}}/" id="copyurl" />
 				<a href="#" id="cancelMore">avbryt, vis andre sendealternativer</a>
 			</div>
