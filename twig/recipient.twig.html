@@ -20,6 +20,7 @@
 {% endblock %}
 
 {% block content %}
+	<style>{% embed "card.container_styling.twig.html" %}{% endembed %}</style>
 	{% embed "card.twig.html" with card %}{% endembed %}
 	<div class="clearfix"></div>
 {% endblock %}
