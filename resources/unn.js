@@ -35,7 +35,7 @@ jQuery(document).on('click', '#sendMail', function(){
 });
 
 jQuery(document).on('click', '#sendPrint', function(){
-	window.open(jQuery('#printurl').val(), 'PRINT', 'width=800,height=400');	
+	window.open(jQuery('#printurl').val(), 'PRINT', 'width=1025,height=400');	
 	thankyou( 'utskrift' );
 	log('print');
 });
