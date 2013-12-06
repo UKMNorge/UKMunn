@@ -19,4 +19,4 @@ $TWIG['card']['canonical'] = $TWIG['url']->base . $TWIG['card']['id'] .'-'. $TWI
 $name = explode(' ', $TWIG['card']['sender']);
 $ant_names = sizeof($name);
 $firstname = array_splice($name, 0, ceil($ant_names/2));
-$TWIG['card']['sender_firstname'] = implode($firstname, ' ');
+$TWIG['card']['sender_firstname'] = implode(' ', $firstname);
