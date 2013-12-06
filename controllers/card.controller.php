@@ -12,10 +12,11 @@ $TWIG['card'] = mysql_fetch_assoc( $res );
 foreach( $TWIG['card'] as $key => $val )
 	$TWIG['card'][$key] = utf8_encode( $val );
 	
-$spacePOS = strpos($TWIG['card']['sender'], ' ');
-if($spacePOS > 0 )
-	$TWIG['card']['sender_firstname'] = substr( $TWIG['card']['sender'], 0, $spacePOS );
-else
-	$TWIG['card']['sender_firstname'] = $TWIG['card']['sender'];
 
 $TWIG['card']['canonical'] = $TWIG['url']->base . $TWIG['card']['id'] .'-'. $TWIG['card']['url'] .'/';
+
+
+$name = explode(' ', $TWIG['card']['sender']);
+$ant_names = sizeof($name);
+$firstname = array_splice($name, 0, ceil($ant_names/2));
+$TWIG['card']['sender_firstname'] = implode($firstname, ' ');
