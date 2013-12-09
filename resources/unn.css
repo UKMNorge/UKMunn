@@ -191,6 +191,10 @@
 		background: rgb(238, 238, 238);
 	}
 	
+	
+	#chooseaction a {
+		text-transform: uppercase;
+	}
 
 /* ********************************** */
 /* RECIPIENT VIEW */
