@@ -5,10 +5,11 @@
 {% endblock %}
 
 	
-	
+{% block style %}
+	{% embed "style.cardcontainer.twig.css" %}{% endembed %}
+{% endblock %}
 	
 {% block content %}
-	<style>{% embed "card.container_styling.twig.html" %}{% endembed %}</style>
 	<input type="hidden" name="cardID" id="cardID" value="{{invite.urlID}}" />
 	<div class="clearfix"></div>
 	{% embed "card.twig.html" with card %}{% endembed %}
