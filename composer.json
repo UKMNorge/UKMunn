@@ -4,6 +4,7 @@
 		"silex/silex": "~1.1",
 		"twig/twig": "1.*",
 		"leafo/lessphp": "0.4.0",
-		"mrclay/minify": "*"
+		"mrclay/minify": "*",
+		"components/handlebars.js": "*"
 	}
 }
