@@ -86,7 +86,7 @@
 
 
 	#cloudcontainer {
-		background: url('/resources/img/clouds_no_parallax.png') bottom center no-repeat fixed;
+		background: url('/resources/img/clouds_no_parallax_v3.png') bottom center no-repeat;
 		padding-top: 20px;
 		padding-bottom: 100px;
 	}
