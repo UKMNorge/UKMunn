@@ -1,5 +1,5 @@
 <?php
-$MAXSEND = 30;
+$MAXSEND = 3;
 
 $info = explode('-', $_POST['send_url']);
 $ID = $info[0];
