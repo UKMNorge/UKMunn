@@ -1,0 +1,25 @@
+{% extends "layout.twig.html" %}
+
+{% block content_header %}
+	<p class="lead">Norges viktigste visningsarena for unge talenter</p>
+{% endblock %}
+
+{% block style %}
+	#container_content,
+	#container_content_inner {
+		background: none;
+		border: none;
+		text-align: center;
+	}
+{% endblock %}
+
+{% block content %}
+	<a href="http://ukm.no/pamelding/" class="btn btn-primary" target="_blank">Dette er noe for meg, start påmelding!</a> 
+	&nbsp; 
+	<a href="/" class="btn btn-primary">Jeg kjenner noen som bør delta!</a>
+{% endblock %}
+
+
+{% block content_footer %}	
+	{% embed "infofooter.twig.html" %}{% endembed %}
+{% endblock %}

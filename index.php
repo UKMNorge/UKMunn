@@ -98,6 +98,10 @@ $TWIG = array('url' => $url);
 		return $app['twig']->render( 'printcard.twig.html', $TWIG );
 	}); 
 	
+	
+	$app->get('/hva-er/', function() use($app, $TWIG) {
+		return $app['twig']->render( 'hvaer.twig.html', $TWIG );
+	});
 
 $app->run();
 ?>
