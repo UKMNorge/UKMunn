@@ -5,12 +5,7 @@
 {% endblock %}
 
 {% block style %}
-	#container_content,
-	#container_content_inner {
-		background: none;
-		border: none;
-		text-align: center;
-	}
+	{% embed "style.nocontainer.twig.css" %}{% endembed %}
 {% endblock %}
 
 {% block content %}

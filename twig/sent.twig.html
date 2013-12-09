@@ -4,15 +4,16 @@
 	<h1>Takk for at du sendte kortet til {{card.recipient}}</h1>	
 {% endblock %}
 
+{% block style %}
+	{% embed "style.nocontainer.twig.css" %}{% endembed %}
+{% endblock %}
+
 {% block content %}
-	<div align="center">
-		<p>
-			<a href="/" class="btn btn-primary">Inviter en annen person</a>
-		</p>
-		<p>
-			<a href="http://ukm.no/lokal/" class="btn btn-primary">Se hvem som er påmeldt</a>
-		</p>
-	</div>
+	<p>
+		<a href="/" class="btn btn-primary">Inviter en annen person</a>
+	&nbsp;
+		<a href="http://ukm.no/lokal/" class="btn btn-primary">Se hvem som er påmeldt</a>
+	</p>
 {% endblock %}
 
 {% block content_footer %}
