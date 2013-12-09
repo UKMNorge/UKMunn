@@ -205,6 +205,35 @@
 		padding-bottom: 10px;
 		font-size: 22px;
 	}
+	
+	@media print {
+		#card_container_right{
+			float: right;
+			border: none;
+			width: 30%;
+		}
+		#card_container_stamp {
+			width: 100%;
+			text-align: right;
+		}
+		#card_container_stamp img {
+			width: 70%;
+		}
+		#card_container_meta {
+			width: 100%;
+			clear: both;
+		}
+		body, 
+		html,
+		#cloudcontainer {
+			background: none;
+		}
+		#card_container_left {
+			border: none;
+			border-right: 2px solid #000;
+		}
+	}
+	
 	#card_container_meta div {
 		margin-top: 10px;
 	}
