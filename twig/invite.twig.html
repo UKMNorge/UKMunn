@@ -15,6 +15,7 @@
 
 {% block content_header %}
 	<p class="lead">Kjenner du en kreativ ungdom som fortjener en minneverdig opplevelse?</p>
+	<p>Her kan du oppfordre personen til å delta på UKM!</p>
 {% endblock %}
 
 {% block script %}
@@ -27,7 +28,7 @@
 	<form method="POST" action="{{url.base}}">
 		<div class="form-group">
 			<label for="recipient">Til</label>
-			<input type="text" class="form-control" id="recipient" name="recipient" ng-model="recipient" placeholder="Skriv fornavn på mottaker" required>
+			<input type="text" class="form-control" id="recipient" name="recipient" ng-model="recipient" placeholder="Skriv fornavnet på personen du vil oppfordre til å delta" required>
 		</div>
 
 
