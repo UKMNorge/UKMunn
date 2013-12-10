@@ -11,19 +11,21 @@ $TWIG['categories'] = array(
 	'med litteratur',
 	'med visuell kunst',
 
-	'som arrangør',
 	'med cheerleading',
 	'med håndarbeid',
 	'med teater',
-	'som journalist',
 	'med kampsport',
-	'som konferansier',
-	'i nettredaksjonen',
 	'med nysirkus',
-	'som scenetekniker',
 	'med stand-up',
 	'med tegning',
+
+	'som arrangør',
+	'som konferansier',
+	'som journalist',
+	'som scenetekniker',
 	'som tryllekunstner',
+	'i nettredaksjonen',
+
 );
 
 #	'med animasjon',
