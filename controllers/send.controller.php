@@ -44,6 +44,8 @@ if( mysql_num_rows( $res ) >= $MAXSEND ) {
 			if( !empty( $TWIG['card']['message'] ) ) {
 				$message = explode(' ', $TWIG['card']['message']);
 				$TWIG['card']['message'] = implode(' ', array_splice($message, 0, 8) );
+				if( sizeof( $message ) > 8 )
+					$TWIG['card']['message'] .= '...';
 			}
 			$text = TWIGrender('card', $TWIG['card']);
 			$mail = new UKMmail();
