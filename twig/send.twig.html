@@ -33,15 +33,15 @@
 			<input type="hidden" value="{{invite.urlID}}" name="urlID" id="urlID" />
 		
 			<div class="buttons" id="actionButtons">
-				<button class="btn btn-primary btn-small" id="sendFace">Send på facebook</button>
+				<button class="btn btn-primary btn-small" onclick="_gaq.push(['_trackPageview','/virtuell/SendVia-facebook']);" id="sendFace">Send på facebook</button>
 				<div class="col-xs-12 visible-xs"></div>
-				<button class="btn btn-primary btn-small" id="sendSMS">Send som SMS</button>
+				<button class="btn btn-primary btn-small" onclick="_gaq.push(['_trackPageview','/virtuell/SendVia-sms']);" id="sendSMS">Send som SMS</button>
 				<div class="col-xs-12 visible-xs"></div>
-				<button class="btn btn-primary btn-small" id="sendMail">Send som e-post</button>
+				<button class="btn btn-primary btn-small" onclick="_gaq.push(['_trackPageview','/virtuell/SendVia-email']);" id="sendMail">Send som e-post</button>
 				<div class="col-xs-12 visible-xs"></div>
-				<button class="btn btn-primary btn-small" id="sendPrint">Skriv ut</button>
+				<button class="btn btn-primary btn-small" onclick="_gaq.push(['_trackPageview','/virtuell/SendVia-utskrift']);" id="sendPrint">Skriv ut</button>
 				<div class="col-xs-12 visible-xs"></div>
-				<button class="btn btn-primary btn-small" id="sendManual">Send på annen måte</button>
+				<button class="btn btn-primary btn-small" onclick="_gaq.push(['_trackPageview','/virtuell/SendVia-manuelt']);" id="sendManual">Send på annen måte</button>
 				<div class="clearfix"></div>
 			</div>
 			

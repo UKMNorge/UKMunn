@@ -54,7 +54,7 @@
 			<textarea id="message" class="form-control" name="message" placeholder="Hvis du ønsker kan du skrive en personlig hilsen til {% raw %}{{recipient || 'mottaker'}}{% endraw %} her"></textarea>
 		</div>		
 		
-		<button class="btn btn-success" type="submit" id="create" name="create">Generer invitasjonskort</button>
+		<button class="btn btn-success" type="submit" id="create" name="create" onclick="_gaq.push(['_trackPageview','/virtuell/LagInvitasjon']);">Generer invitasjonskort</button>
 		<p id="saved">
 			<small>OBS: Alle invitasjoner blir lagret</small>
 		</p>
