@@ -9,6 +9,7 @@ $TWIG['categories'] = array(
 	'med litteratur',
 
 	'med design',
+	'med trylling',
 	'med sang',
 	'med band',
 	'med cheerleading',
@@ -22,7 +23,6 @@ $TWIG['categories'] = array(
 	'som konferansier',
 	'som journalist',
 	'som scenetekniker',
-	'som tryllekunstner',
 	'i nettredaksjonen',
 
 );
