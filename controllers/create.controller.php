@@ -10,10 +10,10 @@ $password = substr($password, strlen( $password ) - 5 );
 
 $SQL = new SQLins('ukm_unn');
 $SQL->charset();
-$SQL->add('recipient', $_POST['recipient']);
-$SQL->add('sender', $_POST['sender']);
+$SQL->add('recipient', str_replace("'","\'",$_POST['recipient']));
+$SQL->add('sender', str_replace("'","\'",$_POST['sender']));
 $SQL->add('category', $_POST['category']);
-$SQL->add('message', $_POST['message']);
+$SQL->add('message', str_replace("'","\'",$_POST['message']));
 $SQL->add('url', $password);
 $res = $SQL->run();
 
