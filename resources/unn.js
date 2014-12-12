@@ -10,10 +10,17 @@ jQuery(document).on('click', '#sendManual', function(){
 	log('manual');
 });
 
+jQuery(document).on('click', '#sendFaceManual', function(){
+	jQuery('#sendFaceUrlContainer').slideDown();
+	jQuery('#actionButtons').slideUp();
+	log('manualFace');
+});
+
 jQuery(document).on('click', '#cancelMore, #cancelThankYou', function(){
 	jQuery('#collectMore').html('').slideUp();
 	jQuery('#actionButtons').slideDown();
 	jQuery('#sendUrlContainer').slideUp();
+	jQuery('#sendFaceUrlContainer').slideUp();
 	jQuery('#thankyou').slideUp();
 });
 

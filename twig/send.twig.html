@@ -33,20 +33,36 @@
 			<input type="hidden" value="{{invite.urlID}}" name="urlID" id="urlID" />
 		
 			<div class="buttons" id="actionButtons">
-				<button class="btn btn-primary btn-small" onclick="_gaq.push(['_trackPageview','/virtuell/SendVia-facebook']);" id="sendFace">Send på facebook</button>
-				<div class="col-xs-12 visible-xs"></div>
-				<button class="btn btn-primary btn-small" onclick="_gaq.push(['_trackPageview','/virtuell/SendVia-sms']);" id="sendSMS">Send som SMS</button>
-				<div class="col-xs-12 visible-xs"></div>
-				<button class="btn btn-primary btn-small" onclick="_gaq.push(['_trackPageview','/virtuell/SendVia-email']);" id="sendMail">Send som e-post</button>
-				<div class="col-xs-12 visible-xs"></div>
-				<button class="btn btn-primary btn-small" onclick="_gaq.push(['_trackPageview','/virtuell/SendVia-utskrift']);" id="sendPrint">Skriv ut</button>
-				<div class="col-xs-12 visible-xs"></div>
-				<button class="btn btn-primary btn-small" onclick="_gaq.push(['_trackPageview','/virtuell/SendVia-manuelt']);" id="sendManual">Send på annen måte</button>
+				<div class="visible-lg col-lg-2"></div>
+				<div class="col-md-3 col-lg-2 hidden-xs hidden-sm">
+					<button class="btn btn-primary btn-small btn-block" onclick="_gaq.push(['_trackPageview','/virtuell/SendVia-facebook']);" id="sendFace">Send på facebook</button>
+				</div>
+				<div class="col-xs-12 col-sm-6 hidden-md hidden-lg">
+					<button class="btn btn-primary btn-small btn-block" onclick="_gaq.push(['_trackPageview','/virtuell/SendVia-sms']);" id="sendSMS">Send som SMS</button>
+				</div>
+				<div class="col-xs-12 col-sm-6 hidden-md hidden-lg">
+					<button class="btn btn-primary btn-small btn-block" onclick="_gaq.push(['_trackPageview','/virtuell/SendVia-facebook']);" id="sendFaceManual">Send som facebook</button>
+				</div>
+				<div class="col-xs-12 col-sm-6 col-md-3 col-lg-2">
+					<button class="btn btn-primary btn-small btn-block" onclick="_gaq.push(['_trackPageview','/virtuell/SendVia-email']);" id="sendMail">Send som e-post</button>
+				</div>
+				<div class="col-xs-12 col-sm-6 col-md-3 col-lg-2 hidden-xs hidden-sm">
+					<button class="btn btn-primary btn-small btn-block" onclick="_gaq.push(['_trackPageview','/virtuell/SendVia-utskrift']);" id="sendPrint">Skriv ut</button>
+				</div>
+				<div class="col-xs-12 col-sm-6 col-md-3 col-lg-2">
+					<button class="btn btn-primary btn-small btn-block" onclick="_gaq.push(['_trackPageview','/virtuell/SendVia-manuelt']);" id="sendManual">Send på annen måte</button>
+				</div>
 				<div class="clearfix"></div>
 			</div>
 			
 			<div class="alert alert-info col-xs-12 col-sm-8 col-sm-offset-2" id="sendUrlContainer" style="display:none">
 				Kopier og send denne adressen til {{card.recipient}}
+				<div class="form-control" id="copyurl">{{card.canonical}}</div>
+				<a href="#" id="cancelMore">avbryt, vis andre sendealternativer</a>
+			</div>
+		
+			<div class="alert alert-info col-xs-12 col-sm-8 col-sm-offset-2" id="sendFaceUrlContainer" style="display:none">
+				Kopier og del denne adressen på veggen til {{card.recipient}}
 				<div class="form-control" id="copyurl">{{card.canonical}}</div>
 				<a href="#" id="cancelMore">avbryt, vis andre sendealternativer</a>
 			</div>
