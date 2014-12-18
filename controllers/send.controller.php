@@ -25,9 +25,13 @@ if( mysql_num_rows( $res ) >= $MAXSEND ) {
 		//// SEND SMS
 		case 'sms':
 			require_once('UKM/sms.class.php');
+			$number = str_replace(' ', '', $_POST['send_to']);
+			if(strlen( $number ) > 8 ) {
+				$number = substr( $number, strlen($number)-8 );
+			}
 			$sms = new SMS('unnukm',1);
 			$sms->text('Hei! Noen unner deg en UKM-opplevelse. Se '. $TWIG['card']['canonical'])
-				->to($_POST['send_to'])
+				->to($number)
 				->from('UKM')
 				->ok();
 			break;
